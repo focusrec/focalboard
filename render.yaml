@@ -1,0 +1,18 @@
+databases:
+  - name: focalboard-db
+    databaseName: focaldb
+    user: focaluser
+services:
+  - type: web
+    name: focalboard
+    env: docker
+    repo: https://github.com/SEU_USUARIO/focalboard.git
+    branch: main
+    dockerCommand: /app/focalboard-server
+    healthCheckPath: /api/v1/ping
+    envVars:
+      - key: FOCALBOARD_POSTGRES
+        fromDatabase:
+          name: focalboard-db
+          property: connectionString
+    autoDeploy: false
