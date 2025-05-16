@@ -6,7 +6,7 @@ services:
   - type: web
     name: focalboard
     env: docker
-    repo: https://github.com/focusrec/focalboard.git
+    repo: https://github.com/focusurec/focalboard.git
     branch: main
     dockerCommand: /app/focalboard-server
     healthCheckPath: /api/v1/ping
