@@ -7,7 +7,7 @@ services:
     name: focalboard
     env: docker
     repo: https://github.com/focusurec/focalboard.git
-    branch: main  # Alterado de 'master' para 'main'
+    branch: main
     dockerCommand: /app/focalboard-server
     healthCheckPath: /api/v1/ping
     envVars:
